@@ -20,9 +20,7 @@ app.get("/", (req, res) => {
 
 app.use(IndexRouter);
 
-const url =
-  "mongodb+srv://luthfimacos:macosaccs@luthi-work.qxilk.mongodb.net/health_booking?retryWrites=true&w=majority";
-
+const url = process.env.DB_URL;
 const PORT = process.env.PORT || 8080;
 
 mongoose
